@@ -21,5 +21,5 @@ const params = {
   name:'zj',
   ih:'ds'
 };
-const mAscii = meansJs.mAscii(params); // ihdsnamezj
+const meAscii = meansJs.meAscii(params); // ihdsnamezj
 ```

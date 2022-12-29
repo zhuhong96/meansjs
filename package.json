@@ -8,6 +8,7 @@
     "build": "rollup -c",
     "serve": "rollup -c -w"
   },
+  "repository": "https://github.com/zh317626/meansjs",
   "keywords": [
     "means",
     "常用方法",
