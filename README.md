@@ -23,3 +23,7 @@ const params = {
 };
 const meAscii = meansJs.meAscii(params); // ihdsnamezj
 ```
+
+#### 排序
+
+> * "arr" 数组
