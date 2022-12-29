@@ -5,7 +5,7 @@
  */
 var ascii = function ascii() {
   var obj = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  if (Object.keys(obj).length) {
+  if (!Object.keys(obj).length) {
     return '必须传一个对象';
   }
   var arr = new Array();

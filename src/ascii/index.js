@@ -6,7 +6,7 @@
  * @returns 
  */
 const ascii = (obj={}) => {
-    if (Object.keys(obj).length) {
+    if (!Object.keys(obj).length) {
         return '必须传一个对象';
     };
     let arr = new Array();
