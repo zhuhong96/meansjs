@@ -14,6 +14,14 @@ npm install meansjs
 import meansJs from 'meansjs';
 ```
 
+| means(方法) |  功能       |
+| :---        |  :---      |
+| meAscii     |  ASCII排序 |
+| meSort      |    排序    |
+| meSortSize  |  字符长度排序  |
+| meCharacterSize  |   字符长度  |
+| test        |            |
+
 #### ASCII排序
 
 meAscii
