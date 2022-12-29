@@ -1,0 +1,23 @@
+{
+  "name": "meansjs",
+  "version": "1.0.0",
+  "description": "日常开发中常用方法",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "serve": "rollup -c -w"
+  },
+  "keywords": [
+    "means",
+    "常用方法",
+    "api"
+  ],
+  "author": "zh",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "rollup": "^3.9.0"
+  }
+}
