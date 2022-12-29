@@ -16,15 +16,13 @@ import meansJs from 'meansjs';
 
 | means(方法) |  功能       |
 | :---        |  :---      |
-| meAscii     |  ASCII排序 |
+| meAscii (#meAscii)    |  ASCII排序 |
 | meSort      |    排序    |
 | meSortSize  |  字符长度排序  |
 | meCharacterSize  |   字符长度  |
 | test        |            |
 
-#### ASCII排序
-
-meAscii
+#### meAscii
 
 * meAscii方法必须传递一个对象;
 
@@ -37,9 +35,7 @@ const params = {
 const meAscii = meansJs.meAscii(params); // id1namemeans
 ```
 
-#### 排序
-
-meSort
+#### meSort
 
 * arr： 排序数组
 * type： asc 升序 ; desc 降序 --- 非必填
@@ -53,9 +49,7 @@ const arr = [
 const size = means.meSort({arr,type:'asc',key:'id'});
 ```
 
-#### 字符长度排序
-
-meSortSize
+#### meSortSize
 
 ***示列***
 ```javascript
@@ -63,9 +57,7 @@ const arr = ['meansjs','js-yyds','我最厉害','zh']
 const size = means.meSortSize(arr); // ['zh', 'meansjs', 'js-yyds', '我最厉害']
 ```
 
-#### 字符长度
-
-meCharacterSize
+#### meCharacterSize
 
 ***示列***
 ```javascript
