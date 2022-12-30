@@ -3,12 +3,12 @@ export default {
     input: 'index.js', // 入口文件
     output: [
         {
-            file: './es/index.js',
+            file: './es/meansjs.min.js',
             format: 'esm',  // 将软件包保存为 ES 模块文件
             name: 'cssModuleVue'
         },
         {
-            file: './dist/index.js',
+            file: './dist/meansjs.min.js',
             format: 'cjs',  // CommonJS，适用于 Node 和 Browserify/Webpack
             name: 'cssModuleVue',
             exports: 'default'
