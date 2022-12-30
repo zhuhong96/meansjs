@@ -24,7 +24,6 @@ import meansJs from 'meansjs';
 |  7        | [meAntiShake](#meAntiShake)           |  防抖           |
 |  1        | test                                  |                 |
 
-:point_down:
 ### meAscii
 
 * meAscii方法必须传递一个对象;
@@ -38,7 +37,6 @@ const params = {
 const meAscii = meansJs.meAscii(params); // id1namemeans
 ```
 
-:point_down:
 ### meSort
 
 * arr： 排序数组
@@ -53,8 +51,7 @@ const arr = [
 const size = meansJs.meSort({arr,type:'asc',key:'id'});
 ```
 
-:point_down:
-### :: meSortSize
+### meSortSize
 
 **示列**
 ```javascript
@@ -62,16 +59,14 @@ const arr = ['meansjs','js-yyds','我最厉害','zh']
 const size = meansJs.meSortSize(arr); // ['zh', 'meansjs', 'js-yyds', '我最厉害']
 ```
 
-:point_down:
-### :: meCharacterSize
+### meCharacterSize
 
 **示列**
 ```javascript
 const size = means.meCharacterSize('meansjs还不错'); // 13
 ```
 
-:point_down:
-### :: meDeepClone
+### meDeepClone
 
 * 对象或者数组都可以进行深拷贝
 
@@ -84,8 +79,7 @@ console.log(deep); // name : "你不是meansjs,那你是个啥?"
 console.log(arr); // name : "我不是meansjs"
 ```
 
-:point_down:
-### :: meAntiShake
+### meAntiShake
 
 * **fn** : 函数 
 * **time** : 时间 --- 默认值 500
