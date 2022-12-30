@@ -14,15 +14,15 @@ npm install meansjs
 import meansJs from 'meansjs';
 ```
 
-| means(方法)                           |  功能           |
-| :---                                  |  :---           |
-| [meAscii](#meAscii)                   |  ASCII排序      |
-| [meSort](#meSort)                     |    排序         |
-| [meSortSize](#meSortSize)             |  字符长度排序    |
-| [meCharacterSize](#meCharacterSize)   |   字符长度       |
-| [meDeepClone](#meDeepClone)           |  深拷贝         |
-| [meAntiShake](#meAntiShake)           |  防抖           |
-| test                                  |                 |
+|  1        | means(方法)                           |  功能           |
+|:---       | :---                                  |  :---           |
+|  2        | [meAscii](#meAscii)                   |  ASCII排序      |
+|  3        | [meSort](#meSort)                     |    排序         |
+|  4        | [meSortSize](#meSortSize)             |  字符长度排序    |
+|  5        | [meCharacterSize](#meCharacterSize)   |   字符长度       |
+|  6        | [meDeepClone](#meDeepClone)           |  深拷贝         |
+|  7        | [meAntiShake](#meAntiShake)           |  防抖           |
+|  1        | test                                  |                 |
 
 ### meAscii
 
