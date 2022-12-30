@@ -20,6 +20,8 @@ import meansJs from 'meansjs';
 | [meSort](#meSort)                     |    排序         |
 | [meSortSize](#meSortSize)             |  字符长度排序    |
 | [meCharacterSize](#meCharacterSize)   |   字符长度       |
+| [meDeepClone](#meDeepClone)           |  深拷贝         |
+| [meAntiShake](#meAntiShake)           |  防抖           |
 | test                                  |                 |
 
 ### meAscii
@@ -46,7 +48,7 @@ const meAscii = meansJs.meAscii(params); // id1namemeans
 const arr = [
   {id:56},{id:98},{id:65}
 ];
-const size = means.meSort({arr,type:'asc',key:'id'});
+const size = meansJs.meSort({arr,type:'asc',key:'id'});
 ```
 
 ### meSortSize
@@ -54,7 +56,7 @@ const size = means.meSort({arr,type:'asc',key:'id'});
 **示列**
 ```javascript
 const arr = ['meansjs','js-yyds','我最厉害','zh']
-const size = means.meSortSize(arr); // ['zh', 'meansjs', 'js-yyds', '我最厉害']
+const size = meansJs.meSortSize(arr); // ['zh', 'meansjs', 'js-yyds', '我最厉害']
 ```
 
 ### meCharacterSize
@@ -64,3 +66,36 @@ const size = means.meSortSize(arr); // ['zh', 'meansjs', 'js-yyds', '我最厉�
 const size = means.meCharacterSize('meansjs还不错'); // 13
 ```
 
+### meDeepClone
+
+* 对象或者数组都可以进行深拷贝
+
+**示列**
+```javascript
+let arr = [{id:1,name:'我不是meansjs'}]
+let deep = meansJs.meDeepClone(arr);
+deep[0].name = '你不是meansjs,那你是个啥?'
+console.log(deep); // name : "你不是meansjs,那你是个啥?"
+console.log(arr); // name : "我不是meansjs"
+```
+### meAntiShake
+
+* **fn** : 函数 
+* **time** : 时间 --- 默认值 500
+
+**示列**
+```javascript
+meansJs.meAntiShake({
+    fn:()=>{
+      console.log('我是meansjs');
+    },
+    time:1000
+}) // or
+
+meansJs.meAntiShake({
+    fn:()=>{
+      test() // 方法
+    },
+    time:1000
+})
+```
