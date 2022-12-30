@@ -14,7 +14,7 @@ npm install meansjs
 import meansJs from 'meansjs';
 ```
 
-|  1        | means(方法) :suspension_railway:      |  功能 :dragon_face:|
+|  1        | means(方法) :wrench:                  |  功能 :dragon_face:|
 |:---       | :---                                  |  :---           |
 |  2        | [meAscii](#meAscii)                   |  ASCII排序      |
 |  3        | [meSort](#meSort)                     |    排序         |
@@ -24,7 +24,7 @@ import meansJs from 'meansjs';
 |  7        | [meAntiShake](#meAntiShake)           |  防抖           |
 |  1        | test                                  |                 |
 
-### meAscii
+### :running: meAscii
 
 * meAscii方法必须传递一个对象;
 
@@ -37,7 +37,7 @@ const params = {
 const meAscii = meansJs.meAscii(params); // id1namemeans
 ```
 
-### meSort
+### :running: meSort
 
 * arr： 排序数组
 * type： asc 升序 ; desc 降序 --- 非必填
@@ -51,7 +51,7 @@ const arr = [
 const size = meansJs.meSort({arr,type:'asc',key:'id'});
 ```
 
-### meSortSize
+### :running: meSortSize
 
 **示列**
 ```javascript
@@ -59,14 +59,14 @@ const arr = ['meansjs','js-yyds','我最厉害','zh']
 const size = meansJs.meSortSize(arr); // ['zh', 'meansjs', 'js-yyds', '我最厉害']
 ```
 
-### meCharacterSize
+### :running: meCharacterSize
 
 **示列**
 ```javascript
 const size = means.meCharacterSize('meansjs还不错'); // 13
 ```
 
-### meDeepClone
+### :running: meDeepClone
 
 * 对象或者数组都可以进行深拷贝
 
@@ -78,7 +78,7 @@ deep[0].name = '你不是meansjs,那你是个啥?'
 console.log(deep); // name : "你不是meansjs,那你是个啥?"
 console.log(arr); // name : "我不是meansjs"
 ```
-### meAntiShake
+### :running: meAntiShake
 
 * **fn** : 函数 
 * **time** : 时间 --- 默认值 500
