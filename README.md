@@ -14,7 +14,7 @@ npm install meansjs
 import meansJs from 'meansjs';
 ```
 
-|  1        | means(方法)                           |  功能           |
+|  1        | means(方法)                           |  :dragon_face:功能           |
 |:---       | :---                                  |  :---           |
 |  2        | [meAscii](#meAscii)                   |  ASCII排序      |
 |  3        | [meSort](#meSort)                     |    排序         |
