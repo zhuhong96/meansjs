@@ -23,7 +23,7 @@ import meansJs from 'meansjs';
 |  6        | [meDeepClone](#meDeepClone)           |  深拷贝         |
 |  7        | [meAntiShake](#meAntiShake)           |  防抖           |
 |  8        | [meThrottle](#meThrottle)             |  节流           |
-|  1        | test                                  |                 |
+|  9        | [meDeWeight](#meDeWeight)             |  数组去重       |
 
 ### meAscii
 
@@ -122,4 +122,16 @@ meansJs.meThrottle({
     },
     time:1000
 })
+```
+
+### meDeWeight
+
+* arr： 排序数组
+* key： 去重字段, 默认为空(一维数组)
+
+**示列**
+```javascript
+let arr = [{id:10},{id:10},{id:2},{id:3},{id:2}];
+// let arr = [1,2,1,2,3];
+const meDeWeight = meansJs.meDeWeight(arr,'id');
 ```
