@@ -1,7 +1,7 @@
 import index from "./src/index";
 
-function plugin(){}
+function meansjs(){}
 
-plugin.prototype = index;
+meansjs.prototype = index;
 
-export default new plugin();
+export default new meansjs();

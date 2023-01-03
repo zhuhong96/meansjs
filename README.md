@@ -22,7 +22,7 @@ import meansJs from 'meansjs';
 |  5        | [meCharacterSize](#meCharacterSize)   |   字符长度       |
 |  6        | [meDeepClone](#meDeepClone)           |  深拷贝         |
 |  7        | [meAntiShake](#meAntiShake)           |  防抖           |
-|  7        | [meThrottle](#meThrottle)           |  节流           |
+|  8        | [meThrottle](#meThrottle)             |  节流           |
 |  1        | test                                  |                 |
 
 ### meAscii
