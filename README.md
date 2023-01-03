@@ -22,6 +22,7 @@ import meansJs from 'meansjs';
 |  5        | [meCharacterSize](#meCharacterSize)   |   字符长度       |
 |  6        | [meDeepClone](#meDeepClone)           |  深拷贝         |
 |  7        | [meAntiShake](#meAntiShake)           |  防抖           |
+|  7        | [meThrottle](#meThrottle)           |  节流           |
 |  1        | test                                  |                 |
 
 ### meAscii
@@ -94,6 +95,28 @@ meansJs.meAntiShake({
 }) // or
 
 meansJs.meAntiShake({
+    fn:()=>{
+      test() // 方法
+    },
+    time:1000
+})
+```
+
+### meThrottle
+
+* **fn** : 函数 
+* **time** : 时间 --- 默认值 500
+
+**示列**
+```javascript
+meansJs.meThrottle({
+    fn:()=>{
+      console.log('我是meansjs');
+    },
+    time:1000
+}) // or
+
+meansJs.meThrottle({
     fn:()=>{
       test() // 方法
     },

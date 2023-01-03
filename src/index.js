@@ -4,6 +4,7 @@ import sortSize from "./sort/size";
 import sort from "./sort/index";
 import deepClone from "./deep-clone/index";
 import antiShake from "./anti-shake/index";
+import throttle from "./throttle/index";
 
 export default {
     meAscii:ascii,
@@ -11,5 +12,6 @@ export default {
     meSortSize:sortSize,
     meSort:sort,
     meDeepClone:deepClone,
-    meAntiShake:antiShake
+    meAntiShake:antiShake,
+    meThrottle:throttle
 }

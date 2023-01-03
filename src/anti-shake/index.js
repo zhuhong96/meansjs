@@ -1,13 +1,13 @@
 
+
+let timer = null
+
 /**
  * 防抖
  * @param {*} fn 函数 
  * @param {*} time 时间 
  * @returns 
  */
-
-let timer = null
-
 const antiShake = function (foo) {
 
     // 如果有时间就清除

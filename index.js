@@ -1,3 +1,7 @@
 import index from "./src/index";
 
-export default index;
+function plugin(){}
+
+plugin.prototype = index;
+
+export default new plugin();
