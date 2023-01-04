@@ -5,6 +5,9 @@
 npm install meansjs
 ```
 
+> 也可下载/dist/meansjs.min.js中的文件使用
+
+
 ## API (方法)
 
 日常开发中所需要的方法
