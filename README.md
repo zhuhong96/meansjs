@@ -12,18 +12,16 @@ npm install meansjs
 + 在项目中找到后缀 **.d.ts** 的文件(vue3中是shims-vue.d.ts)；如果没有就自行创建
 + 将 declare module 'meansjs'; 引入其中即可
 
-<br/> 
 
 **示列**
 ```javascript
 // ./src/shims-vue.d.ts
-/* eslint-disable */
 declare module '*.vue' {
   import type { DefineComponent } from 'vue'
   const component: DefineComponent<{}, {}, any>
   export default componen
 }
-declare module 'meansjs';
+declare module 'meansjs'; // 示列
 ```
 
 
@@ -36,16 +34,18 @@ declare module 'meansjs';
 import meansJs from 'meansjs';
 ```
 
-|  1        | means(方法) :wrench:                  |  功能 :dragon_face:|
-|:---       | :---                                  |  :---           |
-|  2        | [meAscii](#meAscii)                   |  ASCII排序      |
-|  3        | [meSort](#meSort)                     |    排序         |
-|  4        | [meSortSize](#meSortSize)             |  字符长度排序    |
-|  5        | [meCharacterSize](#meCharacterSize)   |   字符长度       |
-|  6        | [meDeepClone](#meDeepClone)           |  深拷贝         |
-|  7        | [meAntiShake](#meAntiShake)           |  防抖           |
-|  8        | [meThrottle](#meThrottle)             |  节流           |
-|  9        | [meDeWeight](#meDeWeight)             |  数组去重       |
+|  1        | means(方法) :wrench:                  |  功能 :dragon_face:|      返回类型       |
+|:---       | :---                                  |  :---           |          ---:       |
+|  2        | [meAscii](#meAscii)                   |  ASCII排序      |       string       |
+|  3        | [meSort](#meSort)                     |    排序         |       Array        |
+|  4        | [meSortSize](#meSortSize)             |  字符长度排序    |       Array        |
+|  5        | [meCharacterSize](#meCharacterSize)   |   字符长度       |       number       |
+|  6        | [meDeepClone](#meDeepClone)           |  深拷贝         |     Array / object  |
+|  7        | [meAntiShake](#meAntiShake)           |  防抖           |          -           |
+|  8        | [meThrottle](#meThrottle)             |  节流           |          -           |
+|  9        | [meDeWeight](#meDeWeight)             |  数组去重       |          Array       |
+|  10       | [meGetUrl](#meGetUrl)                 |  获取url的值    |         object       |
+|  11       | [meTerminal](#meTerminal)             |  终端判断       |         object       |
 
 ### meAscii
 
@@ -156,4 +156,39 @@ meansJs.meThrottle({
 let arr = [{id:10},{id:10},{id:2},{id:3},{id:2}];
 // let arr = [1,2,1,2,3];
 const meDeWeight = meansJs.meDeWeight(arr,'id');
+```
+
+### meGetUrl
+
+* 默认值-空（获取当前页面url）；非空时：获取传递链接url的值
+* 返回对象
+
+**示列**
+```javascript
+meansJs.meGetUrl("http://localhost:8080/#/about?id=12&name='wode'&dsj='dsajk'") // or
+meansJs.meGetUrl() // 获取当前页面url的值
+```
+
+### meTerminal
+
+**示列**
+```javascript
+meansJs.meTerminal() // or
+meansJs.meTerminal()['weixin']
+```
+
+**返回参数**
+```javascript
+ali: false
+android: false
+gecko: true
+iPad: false
+iPhone: false
+ios: false
+mobile: false
+presto: false
+trident: false
+webApp: true
+webKit: false
+weixin: false
 ```
