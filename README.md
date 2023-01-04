@@ -11,6 +11,7 @@ npm install meansjs
 
 + 在项目中找到后缀 **.d.ts** 的文件(vue3中是shims-vue.d.ts)；如果没有就自行创建
 + 将 declare module 'meansjs'; 引入其中即可
+<br/>
 **示列**
 ```javascript
 // ./src/shims-vue.d.ts
