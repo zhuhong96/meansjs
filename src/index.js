@@ -8,6 +8,8 @@ import throttle from "./throttle/index";
 import deWeight from "./de-weight/index";
 import getUrl from "./get-url/index";
 import judgeUa from "./ua/index";
+import toBase64 from "./image/to-base64";
+import base64File from "./image/base64-file";
 
 export default {
     meAscii:ascii,
@@ -19,5 +21,7 @@ export default {
     meThrottle:throttle,
     meDeWeight:deWeight,
     meGetUrl:getUrl,
-    meTerminal:judgeUa
+    meTerminal:judgeUa,
+    meToBase64:toBase64,
+    meBase64File:base64File
 }

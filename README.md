@@ -34,18 +34,20 @@ declare module 'meansjs'; // 示列
 import meansJs from 'meansjs';
 ```
 
-|  1        | means(方法) :wrench:                  |  功能 :dragon_face:|      返回类型       |
-|:---       | :---                                  |  :---           |          ---:       |
-|  2        | [meAscii](#meAscii)                   |  ASCII排序      |       string       |
-|  3        | [meSort](#meSort)                     |    排序         |       Array        |
-|  4        | [meSortSize](#meSortSize)             |  字符长度排序    |       Array        |
-|  5        | [meCharacterSize](#meCharacterSize)   |   字符长度       |       number       |
-|  6        | [meDeepClone](#meDeepClone)           |  深拷贝         |     Array / object  |
-|  7        | [meAntiShake](#meAntiShake)           |  防抖           |          -           |
-|  8        | [meThrottle](#meThrottle)             |  节流           |          -           |
-|  9        | [meDeWeight](#meDeWeight)             |  数组去重       |          Array       |
-|  10       | [meGetUrl](#meGetUrl)                 |  获取url的值    |         object       |
-|  11       | [meTerminal](#meTerminal)             |  终端判断       |         object       |
+|  1        | means(方法) :wrench:                  |  功能 :dragon_face:  |      返回类型       |
+|:---       | :---                                  |  :---               |          ---:      |
+|  2        | [meAscii](#meAscii)                   |  ASCII排序          |       string       |
+|  3        | [meSort](#meSort)                     |    排序             |       Array        |
+|  4        | [meSortSize](#meSortSize)             |  字符长度排序        |       Array        |
+|  5        | [meCharacterSize](#meCharacterSize)   |   字符长度           |       number       |
+|  6        | [meDeepClone](#meDeepClone)           |  深拷贝             |     Array / object  |
+|  7        | [meAntiShake](#meAntiShake)           |  防抖               |          -           |
+|  8        | [meThrottle](#meThrottle)             |  节流               |          -           |
+|  9        | [meDeWeight](#meDeWeight)             |  数组去重           |          Array       |
+|  10       | [meGetUrl](#meGetUrl)                 |  获取url的值        |         object       |
+|  11       | [meTerminal](#meTerminal)             |  终端判断           |         object       |
+|  12       | [meToBase64](#meToBase64)             |  图片链接转为base64 |         string        |
+|  13       | [meBase64File](#meBase64File)         |  base64转为file文件 |        object / file  |
 
 ### meAscii
 
@@ -191,4 +193,32 @@ trident: false
 webApp: true
 webKit: false
 weixin: false
+```
+
+### meToBase64
+
+* 第一个值：图片链接
+* 第二个值：回调函数
+* 第三个值：图片质量 --- 默认值 0.92
+* 第四个值：图片格式 --- 默认值 webp（可以不填，但是不能填空字符串）
+
+**示列**
+```javascript
+meansJs.meToBase64('https://img0.baidu.com/it/u=2692044174,3628684553&fm=253&fmt=auto&app=138&f=JPEG?w=450&h=780',(base64)=>{
+  console.log(base64);
+  this.base64 = base64;
+},0.82,'png',)
+```
+
+### meBase64File
+
+* 第一个值：base64
+* 第二个值：文件名字 --- 默认值 时间戳
+
+**示列**
+```javascript
+meansJs.meToBase64('https://img0.baidu.com/it/u=2692044174,3628684553&fm=253&fmt=auto&app=138&f=JPEG?w=450&h=780',(base64)=>{
+  const file = meansJs.meBase64File(base64,'meansjs');
+  console.log(file);
+},0.82,'png',)
 ```
