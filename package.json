@@ -1,6 +1,6 @@
 {
   "name": "meansjs",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "日常开发中常用方法",
   "main": "index.js",
   "scripts": {
