@@ -6,9 +6,7 @@
  * @returns 
  */
 const ascii = (obj={}) => {
-    if (!Object.keys(obj).length) {
-        return '必须传一个对象';
-    };
+    if (!Object.keys(obj).length) return console.warn('Object cannot be null'); // 对象不能为空
     let arr = new Array();
     let num = 0;
     for (let i in obj) {

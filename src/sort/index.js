@@ -6,20 +6,21 @@
  * @param {*} key 排序字段
  * @returns 
  */
-const sort = ({arr = [],type = 'asc',key = ''}) => {
+const sort = ({ arr = [], type = 'asc', key = '' }) => {
+    if (!arr.length) return console.warn('The array cannot be empty'); // 数组不能为空
     if (key == '') {
         if (type == 'asc') { // 升序
-            return arr.sort((a,b)=>{return a - b});
-        }else { // 降序
-            return arr.sort((a,b)=>{return b - a});
+            return arr.sort((a, b) => { return a - b });
+        } else { // 降序
+            return arr.sort((a, b) => { return b - a });
         }
-    }else {
+    } else {
         return arr.sort(function (a, b) {
             let obj1 = a[key], obj2 = b[key];
             let obj = obj1 - obj2;
-            if(type == 'asc') {
+            if (type == 'asc') {
                 obj = obj1 - obj2;
-            }else if (type == 'desc') {
+            } else if (type == 'desc') {
                 obj = obj2 - obj1;
             };
             return obj;

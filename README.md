@@ -48,6 +48,8 @@ import meansJs from 'meansjs';
 |  11       | [meTerminal](#meTerminal)             |  终端判断           |         object       |
 |  12       | [meToBase64](#meToBase64)             |  图片链接转为base64 |         string        |
 |  13       | [meBase64File](#meBase64File)         |  base64转为file文件 |        object / file  |
+|  14       | [meMin](#meMin)                       |  获取最小值          |        number        |
+|  15       | [meMax](#meMax)                       |  获取最大值          |        number        |
 
 ### meAscii
 
@@ -150,7 +152,7 @@ meansJs.meThrottle({
 
 ### meDeWeight
 
-* arr： 排序数组
+* arr： 数组
 * key： 去重字段, 默认为空(一维数组)
 
 **示列**
@@ -221,4 +223,34 @@ meansJs.meToBase64('https://img0.baidu.com/it/u=2692044174,3628684553&fm=253&fmt
   const file = meansJs.meBase64File(base64,'meansjs');
   console.log(file);
 },0.82,'png',)
+```
+
+### meMin
+
+* 第一个值：数组
+* 第二个值：key值--最小值字段
+
+**示列**
+```javascript
+const arr = [
+  {id:12},{id:45},{id:6}
+];
+const size = meansJs.meMin(arr,'id'); // 6 or
+const arr = [12,45,2,34,5,3];
+const size = meansJs.meMin(arr); // 2
+```
+
+### meMin
+
+* 第一个值：数组
+* 第二个值：key值--最小值字段
+
+**示列**
+```javascript
+const arr = [
+  {id:12},{id:45},{id:6}
+];
+const size = meansJs.meMax(arr,'id'); // 45 or
+const arr = [12,45,2,34,5,3];
+const size = meansJs.meMax(arr); // 45
 ```
