@@ -240,7 +240,7 @@ const arr = [12,45,2,34,5,3];
 const size = meansJs.meMin(arr); // 2
 ```
 
-### meMin
+### meMax
 
 * 第一个值：数组
 * 第二个值：key值--最小值字段
