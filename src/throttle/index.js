@@ -18,6 +18,7 @@ const throttle = function (foo) {
 };
 
 const utils = function({ fn , time = 500}) {
+    if(typeof fn !== 'function') throw new Error('fn must be function');
     // 将this指向赋值   此时的 this 指向的是 实例 button
     let context = this;
     // 获取传过来的值

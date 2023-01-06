@@ -34,22 +34,22 @@ declare module 'meansjs'; // 示列
 import meansJs from 'meansjs';
 ```
 
-|  1        | means(方法) :wrench:                  |  功能 :dragon_face:  |      返回类型       |
-|:---       | :---                                  |  :---               |          ---:      |
-|  2        | [meAscii](#meAscii)                   |  ASCII排序          |       string       |
-|  3        | [meSort](#meSort)                     |    排序             |       Array        |
-|  4        | [meSortSize](#meSortSize)             |  字符长度排序        |       Array        |
-|  5        | [meCharacterSize](#meCharacterSize)   |   字符长度           |       number       |
-|  6        | [meDeepClone](#meDeepClone)           |  深拷贝             |     Array / object  |
-|  7        | [meAntiShake](#meAntiShake)           |  防抖               |          -           |
-|  8        | [meThrottle](#meThrottle)             |  节流               |          -           |
-|  9        | [meDeWeight](#meDeWeight)             |  数组去重           |          Array       |
-|  10       | [meGetUrl](#meGetUrl)                 |  获取url的值        |         object       |
-|  11       | [meTerminal](#meTerminal)             |  终端判断           |         object       |
-|  12       | [meToBase64](#meToBase64)             |  图片链接转为base64 |         string        |
-|  13       | [meBase64File](#meBase64File)         |  base64转为file文件 |        object / file  |
-|  14       | [meMin](#meMin)                       |  获取最小值          |        number        |
-|  15       | [meMax](#meMax)                       |  获取最大值          |        number        |
+|  1        | means(方法) :wrench:                  |  功能 :dragon_face:  |          |    means(方法) :wrench:   |  功能 :dragon_face:             |
+|:---       | :---                                  |  :---               |   :---    | :---                     |    :---                         |
+|  2        | [meAscii](#meAscii)                   |  ASCII排序          |    16     |     [meDate](#meDate)    |       年月日                     |
+|  3        | [meSort](#meSort)                     |    排序             |    17     |     [meTime](#meTime)    |     年月日时分秒                 |
+|  4        | [meSortSize](#meSortSize)             |  字符长度排序        |    18    |      [meUnix](#meUnix)   |      时间戳                      |
+|  5        | [meCharacterSize](#meCharacterSize)   |   字符长度           |          |                           |                                 |
+|  6        | [meDeepClone](#meDeepClone)           |  深拷贝             |           |                           |                                 |
+|  7        | [meAntiShake](#meAntiShake)           |  防抖               |           |                           |                                 |
+|  8        | [meThrottle](#meThrottle)             |  节流               |           |                           |                                 |
+|  9        | [meDeWeight](#meDeWeight)             |  数组去重           |           |                           |                                 |
+|  10       | [meGetUrl](#meGetUrl)                 |  获取url的值        |           |                           |                                 |
+|  11       | [meTerminal](#meTerminal)             |  终端判断           |           |                           |                                 |
+|  12       | [meToBase64](#meToBase64)             |  图片链接转为base64 |           |                           |                                 |
+|  13       | [meBase64File](#meBase64File)         |  base64转为file文件 |           |                           |                                 |
+|  14       | [meMin](#meMin)                       |  获取最小值          |          |                           |                                 |
+|  15       | [meMax](#meMax)                       |  获取最大值          |          |                           |                                 |
 
 ### meAscii
 
@@ -253,4 +253,29 @@ const arr = [
 const size = meansJs.meMax(arr,'id'); // 45 or
 const arr = [12,45,2,34,5,3];
 const size = meansJs.meMax(arr); // 45
+```
+
+
+### meDate
+
+**示列**
+```javascript
+const date = meansJs.meDate();
+console.log(date); // 2023-01-06
+```
+
+### meTime
+
+**示列**
+```javascript
+const time = meansJs.meTime();
+console.log(time); // 2023-01-06 16:16:58
+```
+
+### meUnix
+
+**示列**
+```javascript
+const unix = meansJs.meUnix();
+console.log(unix); // 1672993084067
 ```

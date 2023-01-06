@@ -26,7 +26,7 @@ const toBase64 = (url, cb, quality = 0.92, format = 'webp') => {
         canvas = null;
     };
     img.onerror = e => {
-        throw new Error(`图片链接转base64出错：${e}`);
+        throw new Error(`base64 ${e}`);
     }
     img.src = url;
 }

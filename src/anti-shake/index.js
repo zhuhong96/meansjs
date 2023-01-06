@@ -17,6 +17,7 @@ const antiShake = function (foo) {
 };
 
 const shake = function ({ fn, time = 500}) {
+    if(typeof fn !== 'function') throw new Error('fn must be function');
     const context = this;
     let ages = arguments;
     timer = setTimeout(() => {

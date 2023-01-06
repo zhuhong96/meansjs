@@ -8,6 +8,8 @@
 const getUrl = function (url = '') {
         // 获取url 传递传递过来的值
         const styleList = url ? url : window.location.href;
+        // 判断是否有问号
+        if(styleList.toString().indexOf('?') === -1 ) return console.error('No value found');
         // 查询/截取url中？开始 & 结束以内的值
         const styleOut = styleList.substring(styleList.indexOf('?') + 1).split('&');
         // 声明一个变量 用来接收
