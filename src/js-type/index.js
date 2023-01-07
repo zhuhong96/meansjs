@@ -48,19 +48,30 @@ const typeJudge = (type, boo = false) => {
     };
 
     if (boo) { // 首字母大写
-        kind = kind.substring(0,1).toUpperCase() + kind.substring(1);
-    }else { // 小写
+        kind = kind.substring(0, 1).toUpperCase() + kind.substring(1);
+    } else { // 小写
         kind = kind.toLowerCase();
     }
 
     return kind;
 };
 
+/**
+ * 扁平化
+ * @param {*} arr 
+ * @returns 
+ */
+const flat = (arr = []) => {
+    if (typeJudge(arr) !== 'array') throw new Error('The flattening parameter must be an array');
+    if (!arr.length) throw new Error('The array cannot be empty');
+    return arr.reduce((one, pro) => { return one.concat(typeJudge(pro) === 'array' ? flat(pro) : pro) }, []);
+};
 
 
 class jsType {
     constructor() {
         this.meJstype = typeJudge;
+        this.meFlat = flat;
     }
 };
 
