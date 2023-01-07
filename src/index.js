@@ -13,6 +13,7 @@ import base64File from "./image/base64-file";
 import min from "./range/min";
 import max from "./range/max";
 import toDate from "./date/index";
+import jsType from "./js-type/index";
 
 export default {
     meAscii:ascii,
@@ -29,5 +30,6 @@ export default {
     meBase64File:base64File,
     meMin:min,
     meMax:max,
-    ...toDate
+    ...toDate,
+    ...jsType
 }

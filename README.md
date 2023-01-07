@@ -39,7 +39,7 @@ import meansJs from 'meansjs';
 |  2        | [meAscii](#meAscii)                   |  ASCII排序          |    16     |     [meDate](#meDate)    |       年月日                     |
 |  3        | [meSort](#meSort)                     |    排序             |    17     |     [meTime](#meTime)    |     年月日时分秒                 |
 |  4        | [meSortSize](#meSortSize)             |  字符长度排序        |    18    |      [meUnix](#meUnix)   |      时间戳                      |
-|  5        | [meCharacterSize](#meCharacterSize)   |   字符长度           |          |                           |                                 |
+|  5        | [meCharacterSize](#meCharacterSize)   |   字符长度           |    19    |     [meJstype](#meJstype) |    判断数据类型                  |
 |  6        | [meDeepClone](#meDeepClone)           |  深拷贝             |           |                           |                                 |
 |  7        | [meAntiShake](#meAntiShake)           |  防抖               |           |                           |                                 |
 |  8        | [meThrottle](#meThrottle)             |  节流               |           |                           |                                 |
@@ -278,4 +278,25 @@ console.log(time); // 2023-01-06 16:16:58
 ```javascript
 const unix = meansJs.meUnix();
 console.log(unix); // 1672993084067
+```
+
+### meJstype
+
+* 第一个值：被判断数据
+* 第二个值：是否首字母大写 -- 默认值 false
+
+**示列**
+```javascript
+// let b = '123'; // String
+// let b =  12; // Number
+// let b = true; // Boolean
+// let b = {id:'sda',name:'dsa'}; // Object
+// let b = [{id:1},{id:2}]; // Array
+// let b = null; // Null
+let b = undefined; // Undefined
+// let b = function() {}; // Function
+// let b = new Date(); // Date
+// let b = Symbol(1); // Symbol
+const type = meansJs.meJstype(b,true);
+console.log(type); // 
 ```
