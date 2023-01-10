@@ -66,16 +66,16 @@ const meAscii = meansJs.meAscii(params); // id1namemeans
 
 ### meSort
 
-* arr： 排序数组
-* type： asc 升序 ; desc 降序 --- 非必填
-* key： 排序字段 --- 非必填
+* 第一个值 arr： 排序数组
+* 第二个值 type： asc 升序 ; desc 降序 --- 非必填
+* 第三个值 key： 排序字段 --- 非必填
 
 **示列**
 ```javascript
 const arr = [
   {id:56},{id:98},{id:65}
 ];
-const size = meansJs.meSort({arr,type:'asc',key:'id'});
+const size = meansJs.meSort(arr,type:'asc',key:'id');
 ```
 
 ### meSortSize
@@ -108,46 +108,35 @@ console.log(arr); // name : "我不是meansjs"
 
 ### meAntiShake
 
-* **fn** : 函数 
-* **time** : 时间 --- 默认值 500
+* **第一个值** : 函数 
+* **第二个值** : 时间 --- 默认值 500
 
 **示列**
 ```javascript
-meansJs.meAntiShake({
-    fn:()=>{
-      console.log('我是meansjs');
-    },
-    time:1000
-}) // or
+meansJs.meAntiShake(()=>{
+  console.log('我是meansjs');
+},500) // or
 
-meansJs.meAntiShake({
-    fn:()=>{
-      test() // 方法
-    },
-    time:1000
-})
+meansJs.meAntiShake(()=>{
+  test() // 方法
+},500)
 ```
 
 ### meThrottle
 
-* **fn** : 函数 
-* **time** : 时间 --- 默认值 500
+* **第一个值** : 函数 
+* **第二个值** : 时间 --- 默认值 500
 
 **示列**
 ```javascript
-meansJs.meThrottle({
-    fn:()=>{
-      console.log('我是meansjs');
-    },
-    time:1000
-}) // or
+meansJs.meThrottle(()=>{
+  console.log('我是meansjs');
+},500) // or
 
-meansJs.meThrottle({
-    fn:()=>{
-      test() // 方法
-    },
-    time:1000
-})
+meansJs.meThrottle(()=>{
+  test() // 方法
+},500)
+
 ```
 
 ### meDeWeight

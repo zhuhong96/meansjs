@@ -8,15 +8,15 @@ let timer = null
  * @param {*} time 时间 
  * @returns 
  */
-const antiShake = function (foo) {
+const antiShake = function (foo,time) {
 
     // 如果有时间就清除
     if (timer) clearTimeout(timer);
 
-    shake(foo);
+    shake(foo,time);
 };
 
-const shake = function ({ fn, time = 500}) {
+const shake = function (fn, time = 500) {
     if(typeof fn !== 'function') throw new Error('fn must be function');
     const context = this;
     let ages = arguments;

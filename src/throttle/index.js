@@ -1,9 +1,4 @@
 
-/**
- * 节流
- * @param {*} foo 
- * @returns 
- */
 let timer = null;
 
 /**
@@ -11,14 +6,14 @@ let timer = null;
  * @param {*} fn 函数
  * @param {*} time 时间
  */
-const throttle = function (foo) {
+const throttle = function (foo, time) {
     // timer = null;
     // 返回一个函数值
-    utils(foo);
+    utils(foo, time);
 };
 
-const utils = function({ fn , time = 500}) {
-    if(typeof fn !== 'function') throw new Error('fn must be function');
+const utils = function (fn, time = 500) {
+    if (typeof fn !== 'function') throw new Error('fn must be function');
     // 将this指向赋值   此时的 this 指向的是 实例 button
     let context = this;
     // 获取传过来的值

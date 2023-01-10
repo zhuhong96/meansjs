@@ -6,9 +6,12 @@
  * @param {*} key 排序字段
  * @returns 
  */
-const sort = ({ arr = [], type = 'asc', key = '' }) => {
+const sort = (arr = [], type = 'asc', key = '') => {
     if (!arr.length) return console.warn('The array cannot be empty'); // 数组不能为空
-    if (key == '') {
+    const isKeyObj = arr.some(item => { return Object.keys(item).length });
+    if (isKeyObj && !key) throw new Error('key Cannot be empty'); // 二维数组并且key值空时
+
+    if (!isKeyObj) {
         if (type == 'asc') { // 升序
             return arr.sort((a, b) => { return a - b });
         } else { // 降序
